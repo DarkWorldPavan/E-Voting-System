@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="clenched-fist-1-512-297806.png">
+        <link rel="stylesheet" href="web.css">
+        <title>Register</title>
+        <script type="text/javascript">
+            function validateform()
+            {
+                var name=document.forms["Register"]["Username"];
+                var Email=document.forms["Register"]["Email"];
+                var Pass=document.forms["Register"]["Pass"];
+                var PassC=document.forms["Register"]["PassC"];
+                var atposition=Email.value.indexOf("@");
+                var dotposition=Email.value.indexOf(".");
+                var regEx = /^[A-Za-z]+$/;
+                if(name.value==null || name=="")
+                {
+                    window.alert("Username cant be empty");
+                    name.focus();
+                    return false;    
+                }
+                if(name.value.match(regEx)!=true)
+                {
+                    window.alert("Please enter only  letters in name");
+                    name.focus();
+                    return false;
+                }
+                if(atposition<1 || dotposition<atposition+2 || dotposition+2>=Email.value.length)
+                    {
+                        window.alert("Please enter a valid email");
+                        Email.focus();
+                        return false;
+                    }
+                if(Email.value==null || Email.value=="")
+                {
+                    window.alert("Email cant be empty");
+                    
+                    Email.focus();
+                    return false;
+                }
+                if(Pass.value==null || Pass.value=="")
+                {
+                    window.alert("Password cant be empty");
+                    Pass.focus();
+
+                    return false;
+                }
+                if(Pass.value.length<6)
+                {
+                    window.alert("Password should be greater than 6 characters");
+                    return false;
+                }
+                if(name.value.length<4)
+                {
+                    window.alert("Username should be greater than 4 characters");
+                    return false;
+                }
+                if(Pass.value==PassC.value)
+               {
+                   window.alert("Confirmation password  should be equal to Password");
+                   return false;
+               }
+               else 
+               {
+                window.alert("You are Successfully registerd");
+               }
+               
+            }
+        </script>
+    </head>
+    <body>
+        <div class="icon-bar">
+            <a href="Home.html">
+              <i class="fa fa-home">
+                <p id="Home">Home</p> 
+              </i>
+            </a>
+          </div>
+        <div class="Register">
+            <h2> Register </h2>
+            <form name="Register"  action="Home.html" onsubmit="return validateform() ">    
+                <label>
+                    <b>Username</b>
+
+                </label>
+                <input type="text" name="Username" id="Uname" placeholder="Username" > 
+                <br><br>
+                <label><b>Email    
+                </b>    
+                </label>    
+                <br>
+                <input type="text" name="Email" id="Email" placeholder="Email" >    
+                <br><br>    
+                <label><b>Password     
+                </b>    
+                </label>    
+                <input type="Password" name="Pass" id="Pass1" placeholder="Password" >    
+                <br><br> 
+                <label><b>Confirm Password     
+                </b>    
+                </label>    
+                <input type="Password" name="PassC" id="Pass2" placeholder="Password" >
+                <br><br>
+                <input type="submit" formaction="Login.html" value="Register">       
+                <br><br>       
+                <br><br>    
+                <h4><a href="Login.html">Login</a></h4>
+            </form>
+        </div>
+    </body>
+</html>

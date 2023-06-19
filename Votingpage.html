@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link  rel="stylesheet" href="web.css" type="text/css"> 
+        <link rel="shortcut icon" href="clenched-fist-1-512-297806.png">
+        <title>Voting page</title>
+                
+    </head>
+    <style>
+        table, td{
+          border:1px solid black;
+          background-color:rgb(144, 185, 194);
+          text-align-last: center;
+        }
+        table{
+            margin: 0;
+            position: relative;
+            width: 100%;
+            top: 3%;
+        }
+        h1{
+            text-align: center;
+            color:bisque;
+            margin: auto;
+        }
+        .ballot{
+            height: 100;
+            width: 100;
+            top: 85%;
+            right: 50%;
+        }
+    </style>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <h4>Western Welfare Party</h4>
+                    <img src="download.jpg" alt="blank" height="200" width="200">
+                    <button class="button" 
+                onclick="document.getElementById('demo').innerHTML = 'Your Vote has Successfully Casted..'">CLICK HERE TO VOTE</button>
+                </td>
+                <td>
+                    <h4>Industrial Voter Group</h4>
+                    <img src="download2.jpg" alt="blank" height="200" width="200">
+                    <button class="button" 
+                onclick="document.getElementById('demo').innerHTML = 'Your Vote has Successfully Casted..'">CLICK HERE TO VOTE</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Social Civil Rights Party</h4>
+                    <img src="download3.jpg" alt="blank" height="200" width="200">
+                    <button class="button" 
+                onclick="document.getElementById('demo').innerHTML = 'Your Vote has Successfully Casted..'">CLICK HERE TO VOTE</button>
+                </td>
+                <td>
+                    <h4>Sovereign Patriot Party</h4>
+                    <img src="download4.jpg" alt="blank" height="200" width="200">       
+                    <button class="button" 
+                onclick="document.getElementById('demo').innerHTML = 'Your Vote has Successfully Casted..'">CLICK HERE TO VOTE</button>
+                </td>
+            </tr>
+        </table>
+        <div class="center">
+            <h1 id="demo"> </h1>
+            <img class="ballot" src="ballotbox.jpg">
+            <a href="Home.html">
+             <button class="button">LOGOUT</button>
+            </a>
+        </div>
+    </body>
+</html>
